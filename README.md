@@ -1,6 +1,7 @@
 # face_detection
 
 기본 정보!!
+
 1번~5번 파일은 openCV 패키지 활용
 7번~10번 파일은 mediapipe 패키지 활용
 
