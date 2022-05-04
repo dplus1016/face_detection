@@ -9,6 +9,8 @@
 - opencv 설치: pip install opencv-python
 - mediapipe 설치: pip install mediapipe
 
+---
+
 [참고]
 
 8번~10번 파일은 mediapipe 패키지 파일 수정 필요
