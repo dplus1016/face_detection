@@ -28,6 +28,11 @@ with mp_face_detection.FaceDetection(
     if results.detections==None: continue
     for detection in results.detections:
     # ADH 수정_얼굴만 추출
+    
+    # [mediapipe 패키지 수정]
+    # mediapipe 패키지 - python - solutions - drawing_utils.py - draw_detection 함수 끝에 아래의 내용 추가
+    # return rect_start_point, rect_end_point
+    
       rsp, rep=mp_drawing.draw_detection(image, detection)
       if rsp==None or rep==None: break
       roi=image[rsp[1]:rep[1] , rsp[0]:rep[0]]
