@@ -6,9 +6,8 @@
 
 7번~10번 파일은 mediapipe 패키지 활용
 
-- opencv 설치: pip install opencv-python
 - mediapipe 설치: pip install mediapipe
-
+(mediapipe를 설치하면 opencv 패키지도 자동으로 설치됩니다.)
 ---
 
 [참고]
