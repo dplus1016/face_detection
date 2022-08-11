@@ -15,9 +15,6 @@
 
 8번~10번 파일은 mediapipe 패키지 파일 수정 필요
 
-- mediapipe 패키지 - (폴더)python - (폴더)solutions - (파일)drawing_utils.py - (함수)draw_detection 함수 끝에 아래의 내용 추가
-- (추가 코드) return rect_start_point, rect_end_point
+- mediapipe 패키지 - (폴더)python - (폴더)solutions에 있는 (파일)drawing_utils.py을 본 repo에서 제공하는 파일로 교체
   
-- 아래 이미지 참조
 
-![image](https://user-images.githubusercontent.com/24561701/166693510-1815778d-0a0d-43a8-8b05-0748f98905ff.png)
