@@ -115,23 +115,23 @@ def draw_detection(
 
   elif flag==2:  # 코
     relative_bounding_box = location.relative_bounding_box
-    eye_rect_start_point = _normalized_to_pixel_coordinates(location.relative_keypoints[flag].x-relative_bounding_box.width*0.2, location.relative_keypoints[flag].y-relative_bounding_box.height*0.1, image_cols, image_rows)
-    eye_rect_end_point = _normalized_to_pixel_coordinates(location.relative_keypoints[flag].x+relative_bounding_box.width*0.2, location.relative_keypoints[flag].y+relative_bounding_box.height*0.1, image_cols, image_rows)
-    cv2.rectangle(image, eye_rect_start_point, eye_rect_end_point, bbox_drawing_spec.color, bbox_drawing_spec.thickness)
+    nose_rect_start_point = _normalized_to_pixel_coordinates(location.relative_keypoints[flag].x-relative_bounding_box.width*0.2, location.relative_keypoints[flag].y-relative_bounding_box.height*0.1, image_cols, image_rows)
+    nose_rect_end_point = _normalized_to_pixel_coordinates(location.relative_keypoints[flag].x+relative_bounding_box.width*0.2, location.relative_keypoints[flag].y+relative_bounding_box.height*0.1, image_cols, image_rows)
+    cv2.rectangle(image, nose_rect_start_point, nose_rect_end_point, bbox_drawing_spec.color, bbox_drawing_spec.thickness)
     print(f"x: {location.relative_keypoints[flag].x}, y: {location.relative_keypoints[flag].y}")
 
   elif flag==3:  # 입
     relative_bounding_box = location.relative_bounding_box
-    eye_rect_start_point = _normalized_to_pixel_coordinates(location.relative_keypoints[flag].x-relative_bounding_box.width*0.15, location.relative_keypoints[flag].y-relative_bounding_box.height*0.1, image_cols, image_rows)
-    eye_rect_end_point = _normalized_to_pixel_coordinates(location.relative_keypoints[flag].x+relative_bounding_box.width*0.15, location.relative_keypoints[flag].y+relative_bounding_box.height*0.1, image_cols, image_rows)
-    cv2.rectangle(image, eye_rect_start_point, eye_rect_end_point, bbox_drawing_spec.color, bbox_drawing_spec.thickness)
+    lips_rect_start_point = _normalized_to_pixel_coordinates(location.relative_keypoints[flag].x-relative_bounding_box.width*0.15, location.relative_keypoints[flag].y-relative_bounding_box.height*0.1, image_cols, image_rows)
+    lips_rect_end_point = _normalized_to_pixel_coordinates(location.relative_keypoints[flag].x+relative_bounding_box.width*0.15, location.relative_keypoints[flag].y+relative_bounding_box.height*0.1, image_cols, image_rows)
+    cv2.rectangle(image, lips_rect_start_point, lips_rect_end_point, bbox_drawing_spec.color, bbox_drawing_spec.thickness)
     print(f"x: {location.relative_keypoints[flag].x}, y: {location.relative_keypoints[flag].y}")
 
   elif flag==4 or flag==5:  # 귀
     relative_bounding_box = location.relative_bounding_box
-    eye_rect_start_point = _normalized_to_pixel_coordinates(location.relative_keypoints[flag].x-relative_bounding_box.width*0.15, location.relative_keypoints[flag].y-relative_bounding_box.height*0.1, image_cols, image_rows)
-    eye_rect_end_point = _normalized_to_pixel_coordinates(location.relative_keypoints[flag].x+relative_bounding_box.width*0.15, location.relative_keypoints[flag].y+relative_bounding_box.height*0.1, image_cols, image_rows)
-    cv2.rectangle(image, eye_rect_start_point, eye_rect_end_point, bbox_drawing_spec.color, bbox_drawing_spec.thickness)
+    ear_rect_start_point = _normalized_to_pixel_coordinates(location.relative_keypoints[flag].x-relative_bounding_box.width*0.15, location.relative_keypoints[flag].y-relative_bounding_box.height*0.1, image_cols, image_rows)
+    ear_rect_end_point = _normalized_to_pixel_coordinates(location.relative_keypoints[flag].x+relative_bounding_box.width*0.15, location.relative_keypoints[flag].y+relative_bounding_box.height*0.1, image_cols, image_rows)
+    cv2.rectangle(image, ear_rect_start_point, ear_rect_end_point, bbox_drawing_spec.color, bbox_drawing_spec.thickness)
     print(f"x: {location.relative_keypoints[flag].x}, y: {location.relative_keypoints[flag].y}")
     
  #-------------------------------------------------------------------------------->
